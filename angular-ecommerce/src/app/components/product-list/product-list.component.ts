@@ -7,7 +7,7 @@ import { Product } from '../../common/product';
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
-export class ProductListComponent implements OnInit{
+export class ProductListComponent implements OnInit {
 
   products: Product[] = [];
 
@@ -17,7 +17,7 @@ export class ProductListComponent implements OnInit{
     this.listProducts();
   }
 
-  listProducts(){
+  listProducts() {
     this.productService.getProductList().subscribe(
       data => {
         this.products = data;
